@@ -18,8 +18,8 @@
 - `run.py`: Orchestrates a sequence of scans on a target domain/URL and sends status updates to Telegram.
 - `Aptfile`: System package dependencies for cloud/Docker/Heroku deployment.
 - `requirements.txt`: Python package dependencies.
-- **Modules (Bash scripts)**:  
-  - Examples: `recon.sh`, `Subdomain_Enum.sh`, `Portscan_Fast.sh`, `robots.sh`, etc.
+- **Modules (Bash scripts)**:
+- Examples: `recon.sh`, `Subdomain_Enum.sh`, `Portscan_Fast.sh`, `robots.sh`, etc.
 - `bot.log`: Stores audit logs of bot actions and results.
 
 ## Usage
@@ -27,15 +27,15 @@
 ### Installation
 
 **Install system dependencies**
-
+```bash
 sudo apt-get update
 sudo apt-get install <packages listed in Aptfile>
-
-
+```
 
 **Install Python dependencies**
+```bash
 pip install -r requirements.txt
-
+```
 
 **Configure Telegram credentials**
 - Set your Telegram Bot API key and authorized usernames in the config file (YAML or environment variables).
@@ -43,21 +43,21 @@ pip install -r requirements.txt
 ### Running the Suite
 
 **Start bot**
+```bash
 python bot.py
-
+```
 **Or run scanner directly**
+```bash
 python run.py <target-domain>
-
-
+```
 
 **Control via Telegram**
 - Send commands through Telegram chat:
-  - `/subdomain`
-  - `/portscan`
-  - `/getlog`
-  - ...and others
+- `/subdomain`
+- `/portscan`
+- `/getlog`
+- ...and others
 - Receive scan results, notification updates, download logs and outputs.
-
 ## Contributing
 
 1. Fork this repository.
